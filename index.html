@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gossip Girl - XOXO</title>
+    <style>
+
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #fff;
+    background-image: url('https://i.ytimg.com/vi/gk6QuPkPy9Q/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile Fix */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: auto 100%;
+    }
+}
+
+
+
+
+
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent background for the header */
+        }
+
+        header img {
+            max-width: 300px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+        .main-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(38, 38, 38, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            ackdrop-filter: blur(15px);
+  transition: 0.3s ease-in-out;
+        }
+
+        .back-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(38, 38, 38, 0.4); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            ackdrop-filter: blur(15px);
+  transition: 0.3s ease-in-out;
+        }
+
+        .bottom-container {
+            margin: 0 auto;
+            width: 80%;
+            background-color: rgba(38, 38, 38, 0.0); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            ackdrop-filter: blur(15px);
+  transition: 0.3s ease-in-out;
+        }
+
+        .post-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #d4af37; /* Gold color */
+        }
+
+        .post-author {
+            font-size: 1em;
+            font-style: italic;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .post-content {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 600px; /* Adjust image size */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background-color: #000;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    color: #d4af37;
+    font-size: 1.2em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+        }
+
+    main {
+    flex: 1; /* This makes sure the main content fills the space but doesn't force an unnecessary gap */
+    padding-bottom: 80px; /* Adds some space above the footer */
+}
+
+
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+   
+background-image: url('https://i.ytimg.com/vi/gk6QuPkPy9Q/maxresdefault.jpg'); /* Your background image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+    
+    .post-title {
+        font-size: 1.4em; /* Smaller title */
+    }
+
+    .post-author {
+        font-size: 0.9em; /* Adjusted author text */
+    }
+
+    .post-content {
+        font-size: 1em; /* Smaller body text for better fit */
+    }
+
+    .main-container {
+        width: 90%; /* Make the container a bit wider on mobile */
+        padding: 15px; /* Reduce padding for better spacing */
+    }
+}
+
+      
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sound Once</title>
+</head>
+<body>
+
+<audio id="myAudio" src="https://drive.google.com/file/d/10N1FNlls2SJDLGbe0Zk5W8Ev4ksOcMKo/view?usp=drivesdk"></audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("myAudio");
+
+        if (!sessionStorage.getItem("audioPlayed")) {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+            sessionStorage.setItem("audioPlayed", "true");
+        }
+    });
+</script>
+
+</body>
+       
+<link rel="manifest" href="manifest.json">
+
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Header with Gossip Girl logo -->
+    <header>
+        <img src="https://411girlgossip.yolasite.com/resources/logo.png" alt="Gossip Girl Logo"> <!-- Replace with your logo URL -->
+    </header>
+
+<main>
+ 
+    
+   <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 3, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Hello, Mills. Welcome to the new Gossip Girl—your ultimate source for scandal in the Upper East Side.
+                Stay tuned… because the juiciest gossip is just getting started. You know you love me. XOXO, Gossip Girl.
+                
+            </p>
+            <p>
+              
+             </div>   
+               </div>  
+
+
+                    <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Our Mail
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 5, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Here's the way to spill the gossip.
+            </p>
+            <p>
+               Spill the gossip at "thegossipgirl2024x@gmail.com" and do not worry we are always here.
+
+            </p>
+        </div>
+
+        </div>  
+
+
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 27, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Love in Ink: Iliqn's Heartfelt Confession
+            </p>
+            <p>
+             Spotted: Iliqn, pouring his heart out in a letter to Antoniya. He’s not just writing—he’s confessing.
+             "Antoniya,
+            Every word I write is a piece of my soul. Syadam da pisha tez redove, but nothing captures how I feel like this. When I think of you, time stands still."
+            Will Antoniya be moved? Stay tuned...
+                
+        </div>
+    </div>
+
+
+
+   <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 26, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Extra Credit or Extra Messy?
+            </p>
+            <p>
+             Spotted: Georgi and Ivanina getting way closer than just late-night study sessions. Looks like our man Georgi has officially aced Ivanina’s bed—extra credit included.
+             But will this little rendezvous stay a secret, or is someone about to fail the loyalty test?
+                
+        </div>
+    </div>
+
+
+
+
+    
+
+      <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 26, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Love on the Low (Like, Really Low)
+            </p>
+            <p>
+              Spotted: Mariela sneaking around behind the Block with a new boy toy—emphasis on boy.
+                Sources say he’s even shorter than her, and she’s keeping their romance under wraps (literally).
+                Guess some love stories just aren’t made for the public eye… or the high shelves.
+                 
+        </div>
+    </div>
+
+
+
+     <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 14, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Love is in the Air… and So Are His Parents
+            </p>
+            <p>
+              Spotted: Teodor, usually smooth and unbothered, avoiding Valentine’s Day like it’s a cursed holiday. Poor Gabriela had her heart set on a romantic evening, but Teo?
+                He’s shutting down all things love-related. The reason? A little blast from the past—one he never wanted. Flashback to 12-year-old Teodor, excited to be home early… only to walk in on Mom and Dad in a scene straight out of a movie—except not the kind you want to see.
+                Fast forward to today, and Valentine’s still brings back memories, but not of chocolates and roses. More like therapy bills and repressed horror.
+                Now, Gabriela is left wondering why her man is so allergic to romance, while Teodor is just trying to unsee what can never be unseen.
+                
+        </div>
+    </div>
+    
+
+
+
+
+    
+     <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 11, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Stanimir Logs Off: A Social Renaissance?
+            </p>
+            <p>
+               Spotted: Stanimir, our resident screen addict, finally looking up from his endless TikTok scroll.
+                That’s right, after what feels like ages of being glued to his phone, he’s actually engaging with the group. Shocking.
+                Unheard of. Did someone finally break the algorithm, or is this a glitch in the matrix?
+               Whispers say the group was gagged—was it the sudden realization that he has a voice IRL or the fact that he wasn’t mid-For You Page doomscroll?
+                Either way, this rare social sighting is one for the history books. But don’t get too excited, darlings. Is this a new era, or just a temporary TikTok detox?
+        </div>
+    </div>
+    
+
+         <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 11, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+               Karina’s Cut: Bold Move or Bad Mistake?
+            </p>
+            <p>
+               Spotted: Karina debuting a bold new boyish cut, turning heads—but not in the way she hoped.
+                Word on the street is her boyfriend’s got some thoughts, but will he say them?
+                Especially now that Karina’s stepping into her true identity. Love, loyalty, or just plain confusion? Only time will tell.
+        </div>
+        </div>
+
+    
+
+
+
+        <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 10, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Blows & Breakdown: Iliqn’s Outburst Sends Mariela to the Nurse
+            </p>
+            <p>
+               Spotted: Iliqn losing his temper—and Mariela paying the price. One hit, one breakdown, and a trip to the school nurse later,
+               the whispers are spreading faster than wildfire. Looks like someone’s got a serious problem keeping their hands to themselves.
+               Will Iliqn face the consequences, or will this just be another hush-hush scandal swept under the rug? You know I’ll be watching.
+               Stay safe, Upper East Siders. Some secrets aren’t so easy to forgive.
+        </div>
+        </div>
+
+
+    
+
+        <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 10, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Caught on Camera: Ivanina’s Scandalous Slip-Up
+            </p>
+            <p>
+               Spotted: A certain scandalous video making the rounds—featuring none other than Ivanina and Kobrat in a rather… compromising position. Looks like someone’s been caught with their lips way out of line giving him a blow job.
+               Will this be the end of Ivanina’s spotless reputation? Or just another notch on Kobrat’s belt? Either way, the internet never forgets, and neither do I.
+               Stay tuned, Upper East Siders. This one’s just getting started.
+        </div>
+        </div>
+
+
+
+    
+
+                   <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 7, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Silent Teacher, Loud Savior
+            </p>
+            <p>
+               Spotted: One too-shy homeroom teacher, dodging the spotlight when it came to announcing Gabriela’s fundraiser.
+                Lucky for him, our resident savior K. stepped in to do the talking. Shy or just avoiding the drama? You decide. But one thing’s for sure—heroes come in unexpected forms.
+        </div>
+        </div>
+
+
+            <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 6, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                12 Days of Sin: Ivanina & Kobrata’s Marathon Affair—But the Real Drama Was Yet to Come
+            </p>
+            <p>
+                Spotted: Ivanina playing with fire—and getting burned. She may have had her fun with Kobrata, but the real scandal happened near Ormana, where she was seen with not one, but two mystery men.
+                A wild night in a car, but the real twist? Kobrata wasn’t just in it for the pleasure… he was in it for the payday. Sources say he took more than just her time—he took her money.
+                Looks like Ivanina’s not only left with regrets but also an empty wallet. Tough luck, next time choose your playmates wisely.
+        </div>
+        </div>
+
+
+
+            <!-- Main container for the post -->
+    <div class="main-container">
+        <!-- Post Title -->
+        <div class="post-title">
+            Breaking News: Secrets Unveiled
+        </div>
+
+        <!-- Post Author -->
+        <div class="post-author">
+            Posted by Gossip Girl | February 6, 2025
+        </div>
+
+        <!-- Post Content -->
+        <div class="post-content">
+            <p>
+                Presiana’s Grand Return? Think Again—This Queen Isn’t Looking Back
+            </p>
+            <p>
+                Spotted: Presiana making a bold decision—turns out, she won’t be gracing her old school halls again.
+                And why? Not the drama, not the exes… but the teachers. Looks like someone wasn’t a fan of the faculty, and honestly, who could blame her?
+                One thing’s for sure—class may be in session, but Presiana has already checked out.
+            </p>
+        </div>
+        </div>
+
+            
+
+    </main>
+            
+        
+    <!-- Footer -->
+    <footer>
+        XOXO, Gossip Girl
+    </footer>
+
+</body>
+</html>
